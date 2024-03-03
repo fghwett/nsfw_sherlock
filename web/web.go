@@ -37,6 +37,7 @@ func StartWebServer() {
 		WriteTimeout:  time.Second * 240,
 		ReadTimeout:   time.Second * 240,
 		IdleTimeout:   time.Second * 240,
+		BodyLimit:     20 * 1024 * 1024,
 	})
 	app.Use(cors.New())
 
